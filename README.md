@@ -34,7 +34,3 @@ python manage.py test
 
 ## :zap: Possible Enhancement
 * :whale: Create docker-compose for app
-
-## :page_facing_up: License
-
-This project is [MIT](uri_license) licensed.
