@@ -1,1 +1,0 @@
-from shipmentsService.settings import *

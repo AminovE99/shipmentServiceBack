@@ -1,10 +1,11 @@
-from django.conf import settings
 from django.contrib import admin
 from django.urls import path, re_path, include
 from drf_yasg import openapi
 from drf_yasg.generators import OpenAPISchemaGenerator
 from drf_yasg.views import get_schema_view
 from rest_framework.permissions import AllowAny
+
+from shipmentsService.settings import URL_PREFIX
 
 
 class CustomSchemaGenerator(OpenAPISchemaGenerator):
@@ -28,7 +29,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(settings.API_PREFIX, include('shipments.urls')),
+    path(f'{URL_PREFIX}/', include('shipments.urls')),
     re_path(
         r"swagger/$",
         schema_view.with_ui("swagger", cache_timeout=0),

@@ -7,11 +7,13 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-80letuj@wrm8n2bg8gs
 
 DEBUG = os.getenv('DEBUG', True)
 CORS_ORIGIN_ALLOW_ALL = DEBUG
-API_PREFIX = "/api/"
 ALLOWED_HOSTS = [
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    'testserver'
 ]
+
+URL_PREFIX = 'api'
 
 # Application definition
 
@@ -23,7 +25,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'django_pytest',
     'corsheaders',
     'drf_yasg',
     'shipments',
