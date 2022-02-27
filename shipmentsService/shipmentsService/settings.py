@@ -7,11 +7,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-80letuj@wrm8n2bg8gs
 
 DEBUG = os.getenv('DEBUG', True)
 CORS_ORIGIN_ALLOW_ALL = DEBUG
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    'testserver'
-]
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost' '127.0.0.1' 'testserver').split(' ')
 
 URL_PREFIX = 'api'
 
